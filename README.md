@@ -2,7 +2,9 @@
 
 # Contents
 [General](#General)
+
 [Reinforcement Learning](#Reinforcement)
+
 [GANs](#GANs)
 
 ### General
