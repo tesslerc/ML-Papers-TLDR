@@ -1,4 +1,4 @@
-# Machine Learning Papers TLDR
+# Machine Learning Papers TL;DR
 
 # Contents
 [General](#General)
