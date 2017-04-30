@@ -1,11 +1,11 @@
 # Machine Learning Papers TL;DR
 
 # Contents
-[General](#General)
+[General](#general)
 
-[Reinforcement Learning](#Reinforcement)
+[Reinforcement Learning](#reinforcement-learning)
 
-[GANs](#GANs)
+[GANs](#gans)
 
 # General
 - [DSD: Dense-Sparse-Dense Training for Deep Neural Networks](https://arxiv.org/abs/1607.04381)
