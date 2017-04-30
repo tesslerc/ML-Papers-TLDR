@@ -29,6 +29,4 @@
   Train two GANs (a) and (b). Discriminator (a) predicts if input is from domain (a). Generator (a) converts an input from domain (a) to domain (b). GAN (b) does the opposite direction.
   The main important contribution is the loss function. One loss is that generator (a) converts import x to B(x) that needs to fool discriminator (b). Second loss induced is that generator (b) needs to convert B(x) back to x.
 - [Adversarial Neural Machine Translation](https://arxiv.org/abs/1704.06933)
-  - An interesting implementation of GAN. Would be even more interesting to see a combination of CyclicGAN with machine translation.
-  What it would mean is to require (English -> German -> English) to be an identity operator (i.e return to the same sentence). Also that the (English -> German) would produce a valid sentence in German.
-  This unsupervised method can potentially produce much strong results and be fully automatic even in languages where we lack direct human translations as ground truth for training.
+  - An interesting implementation of GAN. The discriminator receives both the input and the translated output. Supervised training.
