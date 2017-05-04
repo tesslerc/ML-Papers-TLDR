@@ -35,3 +35,10 @@
   The main important contribution is the loss function. One loss is that generator (a) converts import x to B(x) that needs to fool discriminator (b). Second loss induced is that generator (b) needs to convert B(x) back to x.
 - [Adversarial Neural Machine Translation](https://arxiv.org/abs/1704.06933) / [Improving Neural Machine Translation with Conditional Sequence Generative Adversarial Nets](https://arxiv.org/abs/1703.04887)
   - An interesting implementation of GAN. The discriminator receives both the input and the translated output. Supervised training.
+
+
+# TODO
+- [Machine Learning on Sequential Data Using a Recurrent Weighted Average](https://arxiv.org/abs/1703.01253)
+  - Looks like an improved attention mechanism for faster RNN training.
+- [Explaining How a Deep Neural Network Trained with End-to-End Learning Steers a Car](https://arxiv.org/abs/1704.07911)
+  - Last I checked, they perform deep imitation learning.
