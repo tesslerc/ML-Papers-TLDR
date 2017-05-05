@@ -39,6 +39,6 @@
   - An interesting implementation of GAN. The discriminator receives both the input and the translated output. Supervised training.
 
 
-# TODO
+# Non-summarized
 - [Explaining How a Deep Neural Network Trained with End-to-End Learning Steers a Car](https://arxiv.org/abs/1704.07911)
   - Last I checked, they perform deep imitation learning.
