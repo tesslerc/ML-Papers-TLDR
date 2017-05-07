@@ -42,3 +42,5 @@
 # Non-summarized
 - [Explaining How a Deep Neural Network Trained with End-to-End Learning Steers a Car](https://arxiv.org/abs/1704.07911)
   - Last I checked, they perform deep imitation learning.
+- [Going Wider: Recurrent Neural Network With Parallel Cells](https://arxiv.org/abs/1705.01346)
+- [A New Type of Neurons for Machine Learning](https://arxiv.org/abs/1704.08362)
