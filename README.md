@@ -44,3 +44,4 @@
   - Last I checked, they perform deep imitation learning.
 - [Going Wider: Recurrent Neural Network With Parallel Cells](https://arxiv.org/abs/1705.01346)
 - [A New Type of Neurons for Machine Learning](https://arxiv.org/abs/1704.08362)
+- [Parseval Networks: Improving Robustness to Adversarial Examples](https://arxiv.org/abs/1704.08847)
