@@ -47,3 +47,4 @@
 - [Parseval Networks: Improving Robustness to Adversarial Examples](https://arxiv.org/abs/1704.08847)
 - [Visual Attribute Transfer through Deep Image Analogy](https://arxiv.org/abs/1705.01088)
 - [Improved Training of Wasserstein GANs](https://arxiv.org/abs/1704.00028)
+- [Generative Adversarial Trainer: Defense to Adversarial Perturbations with GAN](https://arxiv.org/abs/1705.03387)
