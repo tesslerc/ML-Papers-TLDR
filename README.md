@@ -31,6 +31,7 @@
   The main benefit of the EM distance is that it is always defined (under certain conditions that are satisfied in current neural network architectures) and that the gradient always exists (doesn't go to zero as discriminator reaches optimality). Due to this, we actually benefit in training the discriminator to optimality.
   This is a remarkable paper with sound mathematical proof for convergence in neural networks.
   [This link](http://www.alexirpan.com/2017/02/22/wasserstein-gan.html) contains a nice explanation.
+  [Improved Training of Wasserstein GANs](https://arxiv.org/abs/1704.00028) suggest further improvements. Weight clipping causes convergence issues, they suggest penalizing the norm of the gradient in order to keep it 1-Lipshitz + some other improvements.
 - [Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks](https://arxiv.org/abs/1703.10593) (CycleGAN)
   - They propose a model that can convert an input from domain (a) to domain (b). Example 1. given an image of a *horse*, return the same image with the horse converted to a *zebra* (and the other way around). Example 2. given an *drawing*, return the image as if it was a *photograph* (and the other way around).
   Train two GANs (a) and (b). Discriminator (a) predicts if input is from domain (a). Generator (a) converts an input from domain (a) to domain (b). GAN (b) does the opposite direction.
@@ -46,5 +47,5 @@
 - [A New Type of Neurons for Machine Learning](https://arxiv.org/abs/1704.08362)
 - [Parseval Networks: Improving Robustness to Adversarial Examples](https://arxiv.org/abs/1704.08847)
 - [Visual Attribute Transfer through Deep Image Analogy](https://arxiv.org/abs/1705.01088)
-- [Improved Training of Wasserstein GANs](https://arxiv.org/abs/1704.00028)
 - [Generative Adversarial Trainer: Defense to Adversarial Perturbations with GAN](https://arxiv.org/abs/1705.03387)
+- [Learning to act by predicting the future](https://blog.acolyer.org/2017/05/12/learning-to-act-by-predicting-the-future/)
