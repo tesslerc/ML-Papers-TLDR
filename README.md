@@ -49,4 +49,5 @@
 - [Visual Attribute Transfer through Deep Image Analogy](https://arxiv.org/abs/1705.01088)
 - [Generative Adversarial Trainer: Defense to Adversarial Perturbations with GAN](https://arxiv.org/abs/1705.03387)
 - [Learning to act by predicting the future](https://blog.acolyer.org/2017/05/12/learning-to-act-by-predicting-the-future/)
-- [Model-based Adversarial Imitation Learning](https://arxiv.org/abs/1612.02179)
+- [Model-based Adversarial Imitation Learning](https://arxiv.org/abs/1612.02179) + [Adversarial Transformation Networks:
+Learning to Generate Adversarial Examples](https://arxiv.org/pdf/1703.09387.pdf)
