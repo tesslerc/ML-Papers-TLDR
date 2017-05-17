@@ -47,7 +47,6 @@
 - [A New Type of Neurons for Machine Learning](https://arxiv.org/abs/1704.08362)
 - [Parseval Networks: Improving Robustness to Adversarial Examples](https://arxiv.org/abs/1704.08847)
 - [Visual Attribute Transfer through Deep Image Analogy](https://arxiv.org/abs/1705.01088)
-- [Generative Adversarial Trainer: Defense to Adversarial Perturbations with GAN](https://arxiv.org/abs/1705.03387) + [Adversarial Transformation Networks:
-Learning to Generate Adversarial Examples](https://arxiv.org/pdf/1703.09387.pdf)
+- [Generative Adversarial Trainer: Defense to Adversarial Perturbations with GAN](https://arxiv.org/abs/1705.03387) + [Adversarial Transformation Networks: Learning to Generate Adversarial Examples](https://arxiv.org/pdf/1703.09387.pdf)
 - [Learning to act by predicting the future](https://blog.acolyer.org/2017/05/12/learning-to-act-by-predicting-the-future/)
 - [Model-based Adversarial Imitation Learning](https://arxiv.org/abs/1612.02179)
