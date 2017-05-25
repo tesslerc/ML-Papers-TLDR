@@ -51,3 +51,4 @@
 - [Model-based Adversarial Imitation Learning](https://arxiv.org/abs/1612.02179)
 - [Real-Time Adaptive Image Compression](http://www.wave.one/icml2017)
 - [Adversarial Autoencoders](https://arxiv.org/abs/1511.05644)
+- [Look, Listen and Learn](https://arxiv.org/abs/1705.08168)
