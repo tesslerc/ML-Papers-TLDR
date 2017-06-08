@@ -11,10 +11,11 @@
 - [DSD: Dense-Sparse-Dense Training for Deep Neural Networks](https://arxiv.org/abs/1607.04381)
   - The authors propose a new method for training Deep Neural Networks.
     > In the first D (Dense) step, we train a dense network to learn connection weights and importance. In the S (Sparse) step, we regularize the network by pruning the unimportant connections with small weights and retraining the network given the sparsity constraint. In the final D (re-Dense) step, we increase the model capacity by removing the sparsity constraint, re-initialize the pruned parameters from zero and retrain the whole dense network.
-
     Simply put, Dense (1): learns the most important connections in the network. Sparse (2): uses a slim network to learn a complex problem, this means the representation of the network will concentrate on the most important features + this avoids over fitting. Dense (3): the network is already trained, we re-dense the network by returning the removed connections, now the network will perform fine turning around the learned model.
 - [Machine Learning on Sequential Data Using a Recurrent Weighted Average](https://arxiv.org/abs/1703.01253)
   - Previous works have shown the power of the attention mechanism. This work proposes a similar approach which is easier to implement and which is trainable by simple gradient descent. Their approach takes a weighted average of the cell since the first time step - they show impressive results, especially in the training time.
+- [Scalable and Sustainable Deep Learning via Randomized Hashing](https://arxiv.org/abs/1602.08194)
+  - The authors build on the idea of [Adaptive Dropout](https://papers.nips.cc/paper/5032-adaptive-dropout-for-training-deep-neural-networks.pdf). In adaptive dropout, we sample which neurons to keep active based on a random bernouli variable and given the neuron activation value. Logically, similar inputs will provide similar activations. They exploit this by using [Locality-Sensitive Hashing](https://en.wikipedia.org/wiki/Locality-sensitive_hashing) which gives similar inputs similar hashed values. This allows keeping what neurons should be left active / the probability of each neuron to stay active - per input (or for N distinct inputs). Then the procedure is just hash -> find nearest neighbor -> dropout according to probabilities.
 
 # Reinforcement Learning
 - [Evolution Strategies as a Scalable Alternative to Reinforcement Learning](https://arxiv.org/abs/1703.03864) - [website](https://blog.openai.com/evolution-strategies/)
