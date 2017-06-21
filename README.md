@@ -54,3 +54,4 @@
 - [Adversarial Autoencoders](https://arxiv.org/abs/1511.05644)
 - [Look, Listen and Learn](https://arxiv.org/abs/1705.08168)
 - [Domain-Adversarial Training of Neural Networks](https://arxiv.org/abs/1505.07818) [code](https://discuss.pytorch.org/t/solved-reverse-gradients-in-backward-pass/3589)
+- [meProp: Sparsified Back Propagation for Accelerated Deep Learning with Reduced Overfitting](https://arxiv.org/abs/1706.06197)
