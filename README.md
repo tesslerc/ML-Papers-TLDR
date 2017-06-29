@@ -16,6 +16,8 @@
   - Previous works have shown the power of the attention mechanism. This work proposes a similar approach which is easier to implement and which is trainable by simple gradient descent. Their approach takes a weighted average of the cell since the first time step - they show impressive results, especially in the training time.
 - [Scalable and Sustainable Deep Learning via Randomized Hashing](https://arxiv.org/abs/1602.08194)
   - The authors build on the idea of [Adaptive Dropout](https://papers.nips.cc/paper/5032-adaptive-dropout-for-training-deep-neural-networks.pdf). In adaptive dropout, we sample which neurons to keep active based on a random bernouli variable and given the neuron activation value. Logically, similar inputs will provide similar activations. They exploit this by using [Locality-Sensitive Hashing](https://en.wikipedia.org/wiki/Locality-sensitive_hashing) which gives similar inputs similar hashed values. This allows keeping what neurons should be left active / the probability of each neuron to stay active - per input (or for N distinct inputs). Then the procedure is just hash -> find nearest neighbor -> dropout according to probabilities.
+- [meProp: Sparsified Back Propagation for Accelerated Deep Learning with Reduced Overfitting](https://arxiv.org/abs/1706.06197)
+  - This paper suggests an interesting idea. They note that most of the time consumed during training is in the backpropagation stage - i.e propagating the gradient backwards through the network & updating the weights. They suggest a way to speedup learning by performing learning only on the samples that give the largest gradient (largest loss value). This intuitively can be explained that the smaller gradients will cause smaller steps which will be overwritten by the larger gradient steps.
 
 # Reinforcement Learning
 - [Evolution Strategies as a Scalable Alternative to Reinforcement Learning](https://arxiv.org/abs/1703.03864) - [website](https://blog.openai.com/evolution-strategies/)
@@ -39,11 +41,12 @@
   The main important contribution is the loss function. One loss is that generator (a) converts import x to B(x) that needs to fool discriminator (b). Second loss induced is that generator (b) needs to convert B(x) back to x.
 - [Adversarial Neural Machine Translation](https://arxiv.org/abs/1704.06933) / [Improving Neural Machine Translation with Conditional Sequence Generative Adversarial Nets](https://arxiv.org/abs/1703.04887)
   - An interesting implementation of GAN. The discriminator receives both the input and the translated output. Supervised training.
-
+- [GANs Trained by a Two Time-Scale Update Rule Converge to a Nash Equilibrium](https://arxiv.org/abs/1706.08500)
+  - They propose a two-time scale update rule for the generator & the discriminator. They prove that it converges for SGD and ADAM, they also show improved results on existing GAN architectures.
 
 # Non-summarized
 - [Explaining How a Deep Neural Network Trained with End-to-End Learning Steers a Car](https://arxiv.org/abs/1704.07911)
-  - Last I checked, they perform deep imitation learning.
+  - Last I checked, Nvidia perform deep imitation learning.
 - [Going Wider: Recurrent Neural Network With Parallel Cells](https://arxiv.org/abs/1705.01346)
 - [A New Type of Neurons for Machine Learning](https://arxiv.org/abs/1704.08362)
 - [Parseval Networks: Improving Robustness to Adversarial Examples](https://arxiv.org/abs/1704.08847)
@@ -54,4 +57,3 @@
 - [Adversarial Autoencoders](https://arxiv.org/abs/1511.05644)
 - [Look, Listen and Learn](https://arxiv.org/abs/1705.08168)
 - [Domain-Adversarial Training of Neural Networks](https://arxiv.org/abs/1505.07818) [code](https://discuss.pytorch.org/t/solved-reverse-gradients-in-backward-pass/3589)
-- [meProp: Sparsified Back Propagation for Accelerated Deep Learning with Reduced Overfitting](https://arxiv.org/abs/1706.06197)
