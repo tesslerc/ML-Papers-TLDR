@@ -7,6 +7,8 @@
 
 [GANs](#gans)
 
+[Natural Language Processing](#natural-language-processing)
+
 # General
 - [DSD: Dense-Sparse-Dense Training for Deep Neural Networks](https://arxiv.org/abs/1607.04381)
   - The authors propose a new method for training Deep Neural Networks.
@@ -43,6 +45,8 @@
   - An interesting implementation of GAN. The discriminator receives both the input and the translated output. Supervised training.
 - [GANs Trained by a Two Time-Scale Update Rule Converge to a Nash Equilibrium](https://arxiv.org/abs/1706.08500)
   - They propose a two-time scale update rule for the generator & the discriminator. They prove that it converges for SGD and ADAM, they also show improved results on existing GAN architectures.
+
+# Natural Language Processing
 
 # Non-summarized
 - [Explaining How a Deep Neural Network Trained with End-to-End Learning Steers a Car](https://arxiv.org/abs/1704.07911)
