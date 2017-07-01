@@ -49,6 +49,8 @@
   - An interesting implementation of GAN. The discriminator receives both the input and the translated output. Supervised training.
 - [GANs Trained by a Two Time-Scale Update Rule Converge to a Nash Equilibrium](https://arxiv.org/abs/1706.08500)
   - They propose a two-time scale update rule for the generator & the discriminator. They prove that it converges for SGD and ADAM, they also show improved results on existing GAN architectures.
+- [Fader Networks: Manipulating Images by Sliding Attributes](https://arxiv.org/abs/1706.00409)
+  - The setup is of an Auto-Encoder. Input is of pairs {x<sub>i</sub>,y<sub>i</sub>} where x<sub>i</sub> is the input and y<sub>i</sub> is the label. *Encoder* receives input x<sub>i</sub> and translates it to latent representation (embedding) e<sub>i</sub>. *Decoder* receives {e<sub>i</sub>, y<sub>i</sub>} i.e the embedding and the label, it is required to generate back x<sub>i</sub> - the auto-encoder part of the scheme. The *Discriminator* receives the embedding e<sub>i</sub> and is required to determine the label y<sub>i</sub>. This setup causes the *Encoder* to learn a mapping invariant of the label y<sub>i</sub>, which in turn allows the *Decoder* to create new images based on a change of label (i.e x<sub>i</sub> is a man, we give *Decoder* the y<sub>i</sub> of a woman -> output will be of a woman with the given mans features).
 
 # Natural Language Processing
 
