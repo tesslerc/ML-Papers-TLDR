@@ -67,3 +67,4 @@
 - [Adversarial Autoencoders](https://arxiv.org/abs/1511.05644)
 - [Look, Listen and Learn](https://arxiv.org/abs/1705.08168)
 - [Domain-Adversarial Training of Neural Networks](https://arxiv.org/abs/1505.07818) [code](https://discuss.pytorch.org/t/solved-reverse-gradients-in-backward-pass/3589)
+- [Super-Convergence: Very Fast Training of Residual Networks Using Large Learning Rates](https://arxiv.org/abs/1708.07120)
