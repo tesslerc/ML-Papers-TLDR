@@ -33,6 +33,8 @@
   Their method uses the previous 4 images (no LSTM) as a state. Due to sparse reward they train the agent in domains with increasing difficulty (easy to hard), this makes sense since it is intially provided an easy to solve domain - and uses this knowledge to help it solve a harder domain once it is introduced. *Reward Shaping* - the authors note that they use reward shaping as another method to cope with sparse rewards, something to note is that reward shaping is a means of 'prior knowledge' or 'semi supervised' - it would be interesting see a solution with a more basic reward function like -X per step and +Y per kill.
 - [Learning to Act by Predicting the Future](https://arxiv.org/abs/1611.01779)
   - They introduce two interesting elements: (A) A goal vector, essentially the priority of each task (pickup ammunition, kill enemies, stay alive), (B) they use a predicting element to predict the future values and select the action that best fits the goal.
+- [Zero-Shot Task Generalization with Multi-Task Deep Reinforcement Learning](https://arxiv.org/abs/1706.05064)
+  - The authors tackle a set of 'Multi-Task' problems, in which the tasks are given as a textual input (unordered set of tasks). To tackle this they build upon the hierarchical approach using the option framework. They present several interesting additions: (1) Generalization via Analogy making, (2) Dynamic 'stopping time' (non differentiability tackled via soft updates... *extend explanation here*).
 
 # GANs
 - [Wasserstein GAN](https://arxiv.org/abs/1701.07875)
