@@ -39,6 +39,7 @@
 - [Successor Features for Transfer in Reinforcement Learning](https://arxiv.org/abs/1606.05312)
 - [Universal Option Models](https://papers.nips.cc/paper/5590-universal-option-models.pdf)
 - [Universal Value Function Approximators](http://proceedings.mlr.press/v37/schaul15.pdf)
+- [Deep Reinforcement Learning that Matters](https://arxiv.org/abs/1709.06560)
 
 # GANs
 - [Wasserstein GAN](https://arxiv.org/abs/1701.07875)
