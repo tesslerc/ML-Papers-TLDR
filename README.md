@@ -40,6 +40,11 @@
 - [Universal Option Models](https://papers.nips.cc/paper/5590-universal-option-models.pdf)
 - [Universal Value Function Approximators](http://proceedings.mlr.press/v37/schaul15.pdf)
 - [Deep Reinforcement Learning that Matters](https://arxiv.org/abs/1709.06560)
+- [Trust Region Policy Optimization](https://arxiv.org/abs/1502.05477)
+- [Continuous control with deep reinforcement learning (Deep Deterministic Policy Gradients)](https://arxiv.org/abs/1509.02971)
+- [Proximal Policy Optimization Algorithms](https://arxiv.org/abs/1707.06347)
+- [Scalable trust-region method for deep reinforcement learning using Kronecker-factored approximation](https://arxiv.org/abs/1708.05144)
+- [Asynchronous Methods for Deep Reinforcement Learning (A3C)](https://arxiv.org/abs/1602.01783)
 
 # GANs
 - [Wasserstein GAN](https://arxiv.org/abs/1701.07875)
