@@ -25,6 +25,8 @@
     > "TLDR; Hand-tuned momentum SGD is competitive with state-of-the-art adaptive methods, like Adam. We introduce YellowFin, an automatic tuner for the hyperparameters of momentum SGD. YellowFin trains models such as large ResNets and LSTMs in fewer iterations than the state-of-the-art. It performs even better in asynchronous settings via an on-the-fly momentum adaptation scheme that uses a novel momentum measurement component along with a negative-feedback loop mechanism."
 
 # Reinforcement Learning
+- [Deep Reinforcement Learning that Matters](https://arxiv.org/abs/1709.06560)
+  - The authors in this paper bring to light a large problem with Deep RL. I believe that **reading this paper is a requirement to anyone intending to work with Deep RL**, to properly understand the past / current issues with the research. The problems the authors bring up, are backed by extensive tests to prove their claims. The issues are regarding methods of reporting the results and model evaluation, which are inconsistent between papers and domains and in some cases are bad practice.
 - [Evolution Strategies as a Scalable Alternative to Reinforcement Learning](https://arxiv.org/abs/1703.03864) - [website](https://blog.openai.com/evolution-strategies/)
   - Instead of running a single policy and optimizing it, we generate N random policies with a slight variance between them. We then evaluate them. Finally policies are combined as a weighted average where the weight is given with respect to the score in the evaluation. Combination is done at the weight level in the Neural Network.
   Advantage is a highly parallel solution, where evaluation of all policies can be done in parallel. Also this doesn't require backpropagation, which is a compute intensive solution.
@@ -39,7 +41,6 @@
 - [Successor Features for Transfer in Reinforcement Learning](https://arxiv.org/abs/1606.05312)
 - [Universal Option Models](https://papers.nips.cc/paper/5590-universal-option-models.pdf)
 - [Universal Value Function Approximators](http://proceedings.mlr.press/v37/schaul15.pdf)
-- [Deep Reinforcement Learning that Matters](https://arxiv.org/abs/1709.06560)
 - [Trust Region Policy Optimization](https://arxiv.org/abs/1502.05477)
 - [Continuous control with deep reinforcement learning (Deep Deterministic Policy Gradients)](https://arxiv.org/abs/1509.02971)
 - [Proximal Policy Optimization Algorithms](https://arxiv.org/abs/1707.06347)
@@ -49,7 +50,7 @@
   - The authors propose a new archiecture named UNREAL (UNsupervised REinforcement and Auxiliary Learning), which combines the learning of auxiliary tasks to help the agent in learning the main task. They present two auxiliary tasks: (1) Learning to predict how your actions will change the environment i.e. predict s<sub>t+1</sub> given (s<sub>t</sub>, a<sub>t</sub>) (2) Predict the immediate reward, similar to learning the value function with a discount factor equal to 0. These prediction heads are connected to the feature extraction layer hence they do not interfere (bias) with the policy or the value prediction, but they do help shape the feature extraction layers to facilitate faster learning.
 - [Grounded Language Learning in a Simulated 3D World](https://arxiv.org/abs/1706.06551)
   - The agent is located in a 3D domain (visual input only), and is required to perform as task given in textual format. Their architecture consists of: (1) a CNN to parse the visual input (2) an LSTM to process the task, textual input (3) a Mixing module which combines the outputs of both modules (4) an output LSTM which computes a probability distribution over possible actions &pi;(a<sub>t</sub>, s<sub>t</sub>), and a state-value function approximator V(s<sub>t</sub>). They claim that the simple architecture was not enough in order to acheive learning and that at least several additions were required:
-    - Reward Prediction (RP) - In this auxillary task (**"Reinforcement Learning with Unsupervised Auxiliary Tasks"**), the agent is required to predict the immediate reward (similar to learning the value function with **&gamma; = 0**).
+    - Reward Prediction (RP) - In this auxillary task (*"Reinforcement Learning with Unsupervised Auxiliary Tasks"*), the agent is required to predict the immediate reward (similar to learning the value function with *&gamma; = 0*).
     - Value Replay (VR) - Since the A3C learns in an on-line manner, the VR uses the replay memory (similarly to the DQN) to resample recent historical sequences.
     - Language Prediction (LP) - Another output is received from the visual image processor, which is what the agent thinks will be the task. Intuitively this causes the agent to **understand** what are the important objects in the domain and to concentrate on them during the image parsing.
     - Temporal Autoencoding (tAE) - The tAE's objective is given the visual data v<sub>t</sub> and the action a<sub>t</sub>, to predict the next visual environment v<sub>t+1</sub>.
