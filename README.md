@@ -42,6 +42,7 @@
 - [Improving Generalisation for Temporal Difference Learning: The Successor Representation](http://www.gatsby.ucl.ac.uk/~dayan/papers/d93b.pdf)
 - [Successor Features for Transfer in Reinforcement Learning](https://arxiv.org/abs/1606.05312)
   - Successor Features build upon the idea of Successor Representations (where SR are a special case of SF). The proposed formulation allows (theoretically) to decouple the state representation from the policy. The &Psi;<sub>i</sub>(s,a) contains state-action domain representation, where as w<sub>i</sub> contains the task specific knowledge. They suggest that when learning a new task, one can use the previous &Psi;<sub>k</sub>(s,a) k in {0, ..., i} in a manner of max<sub>k</sub> &Psi;<sub>k</sub>(s,a)\*w. This way, previous domain knowledge can be used and learning rate is improved.
+- [A Distributional Perspective on Reinforcement Learning](https://arxiv.org/abs/1707.06887), Follow up paper [Distributional Reinforcement Learning with Quantile Regression](https://arxiv.org/abs/1710.10044), [Blog](https://flyyufelix.github.io/2017/10/24/distributional-bellman.html)
 - [Universal Option Models](https://papers.nips.cc/paper/5590-universal-option-models.pdf)
 - [Universal Value Function Approximators](http://proceedings.mlr.press/v37/schaul15.pdf)
 - [Trust Region Policy Optimization](https://arxiv.org/abs/1502.05477)
