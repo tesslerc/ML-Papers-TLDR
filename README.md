@@ -23,6 +23,12 @@
 - [YellowFin and the Art of Momentum Tuning](https://arxiv.org/abs/1706.03471)
   - An automatic tuner for momentum SGD - a short explanation is avilable at this [link](http://cs.stanford.edu/~zjian/project/YellowFin/).
     > "TLDR; Hand-tuned momentum SGD is competitive with state-of-the-art adaptive methods, like Adam. We introduce YellowFin, an automatic tuner for the hyperparameters of momentum SGD. YellowFin trains models such as large ResNets and LSTMs in fewer iterations than the state-of-the-art. It performs even better in asynchronous settings via an on-the-fly momentum adaptation scheme that uses a novel momentum measurement component along with a negative-feedback loop mechanism."
+- [Safer Classification by Synthesis](https://arxiv.org/abs/1711.08534)
+  - Discriminative classification models can easily be fooled to classify incorrectly with high confidence by out-of-distribution examples - this in itself can be hazardous in real world applications [(Adversarial examples in the physical world)](https://arxiv.org/abs/1607.02533).
+  - The authors propose to overcome this by using a generative approach – for a given test image, find the latent variable that produces it in generators trained for each class. Then, choose the one with the highest confidence (i.e lowest error compared to the original image).
+  - Intuitive error measures are for instance the MSE, we can define a threshold underwhich the generator is considered unconfident. If all classes are 'unconfident' we would prefer not to classify over being wrong with a high proability.
+  - This is a general approach – and can be used with VAEs or GANs, or even with a k-Means generative model.
+  - The paper shows competitive results for in-distribution test images, and very good results on out-of-distribution images (meaning, the model knows to reject the examples rather than misclassify them).  
 
 # Reinforcement Learning
 - [*(Draft)* Reinforcement Learning: An Introduction, Richard S. Sutton and Andrew G. Barto](http://incompleteideas.net/sutton/book/bookdraft2017nov5.pdf)
