@@ -39,6 +39,8 @@
 - [The Uncertainty Bellman Equation and Exploration](https://arxiv.org/abs/1709.05380v1)
 - [Many-Goals Reinforcement Learning](https://arxiv.org/abs/1806.09605)
   - Many-goals is a task of learning multiple goals (reward signals) at once by exploiting the off-policy nature of the Q-learning algorithm. In this work they present several algorithms for many-goal learning and in addition, they show that many-goal learning can be used as an auxillary task.
+- [Unifying Count-Based Exploration and Intrinsic Motivation](https://arxiv.org/abs/1606.01868)
+  - By using a density network they predict how many times a state has been seen (the pseudo-count). The Q values are then updated by providing an intrinstic motivating reward which decays monotonically in the pseudo-count.
 
 ## Policy based methods
 - [Universal Option Models](https://papers.nips.cc/paper/5590-universal-option-models.pdf)
