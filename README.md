@@ -24,37 +24,31 @@
   - The paper shows competitive results for in-distribution test images, and very good results on out-of-distribution images (meaning, the model knows to reject the examples rather than misclassify them).  
 
 # Reinforcement Learning
+## General
 - [*(Draft)* Reinforcement Learning: An Introduction, Richard S. Sutton and Andrew G. Barto](http://incompleteideas.net/sutton/book/bookdraft2017nov5.pdf)
   - The latest *draft* of the RL intro book, which provides an overview over many of the topics in the field.
 - [Deep Reinforcement Learning that Matters](https://arxiv.org/abs/1709.06560)
   - The authors in this paper bring to light a large problem with Deep RL. I believe that **reading this paper is a requirement to anyone intending to work with Deep RL**, to properly understand the past / current issues with the research. The problems the authors bring up, are backed by extensive tests to prove their claims. The issues are regarding methods of reporting the results and model evaluation, which are inconsistent between papers and domains and in some cases are bad practice.
-- [DeepMimic](https://arxiv.org/abs/1804.02717) - [website](https://xbpeng.github.io/projects/DeepMimic/index.html), [blog](http://bair.berkeley.edu/blog/2018/04/10/virtual-stuntman/), [video](https://www.youtube.com/watch?v=vppFvq2quQ0)
-  - A recording of a human performing complex tasks is used as a regularizer for the agents behavior. They provide the agent with a task reward (how good it is at the given task) combined with a similarity reward (how similar is the behavior to that of the human). With the addition of several other nice tricks (e.g. early termination) they are able to achieve impressive empirical results.
-- [Evolution Strategies as a Scalable Alternative to Reinforcement Learning](https://arxiv.org/abs/1703.03864) - [website](https://blog.openai.com/evolution-strategies/)
-  - Instead of running a single policy and optimizing it, we generate N random policies with a slight variance between them. We then evaluate them. Finally policies are combined as a weighted average where the weight is given with respect to the score in the evaluation. Combination is done at the weight level in the Neural Network.
-  Advantage is a highly parallel solution, where evaluation of all policies can be done in parallel. Also this doesn't require backpropagation, which is a compute intensive solution.
-- [Learning to Act by Predicting the Future](https://arxiv.org/abs/1611.01779)
-  - They introduce two interesting elements: (A) A goal vector, essentially the priority of each task (pickup ammunition, kill enemies, stay alive), (B) they use a predicting element to predict the future values and select the action that best fits the goal.
+- [Reinforcement Learning with Unsupervised Auxiliary Tasks](https://arxiv.org/abs/1611.05397) [Blog](https://deepmind.com/blog/reinforcement-learning-unsupervised-auxiliary-tasks/)
+  - The authors propose a new archiecture named UNREAL (UNsupervised REinforcement and Auxiliary Learning), which combines the learning of auxiliary tasks to help the agent in learning the main task. They present two auxiliary tasks: (1) Learning to predict how your actions will change the environment i.e. predict s<sub>t+1</sub> given (s<sub>t</sub>, a<sub>t</sub>) (2) Predict the immediate reward, similar to learning the value function with a discount factor equal to 0. These prediction heads are connected to the feature extraction layer hence they do not interfere (bias) with the policy or the value prediction, but they do help shape the feature extraction layers to facilitate faster learning.
+
+## Value based methods
 - [A Distributional Perspective on Reinforcement Learning](https://arxiv.org/abs/1707.06887), Follow up paper [Distributional Reinforcement Learning with Quantile Regression](https://arxiv.org/abs/1710.10044), [Blog](https://flyyufelix.github.io/2017/10/24/distributional-bellman.html)
+- [The Uncertainty Bellman Equation and Exploration](https://arxiv.org/abs/1709.05380v1)
+- [Many-Goals Reinforcement Learning](https://arxiv.org/abs/1806.09605)
+  - Many-goals is a task of learning multiple goals (reward signals) at once by exploiting the off-policy nature of the Q-learning algorithm. In this work they present several algorithms for many-goal learning and in addition, they show that many-goal learning can be used as an auxillary task.
+
+## Policy based methods
 - [Universal Option Models](https://papers.nips.cc/paper/5590-universal-option-models.pdf)
 - [Universal Value Function Approximators](http://proceedings.mlr.press/v37/schaul15.pdf)
 - [Trust Region Policy Optimization](https://arxiv.org/abs/1502.05477)
-- [Continuous control with deep reinforcement learning (Deep Deterministic Policy Gradients)](https://arxiv.org/abs/1509.02971)
 - [Proximal Policy Optimization Algorithms](https://arxiv.org/abs/1707.06347)
+- [Continuous control with deep reinforcement learning (Deep Deterministic Policy Gradients)](https://arxiv.org/abs/1509.02971)
 - [Asynchronous Methods for Deep Reinforcement Learning (A3C)](https://arxiv.org/abs/1602.01783)
-- [The Uncertainty Bellman Equation and Exploration](https://arxiv.org/abs/1709.05380v1)
 - [Scalable trust-region method for deep reinforcement learning using Kronecker-factored approximation](https://arxiv.org/abs/1708.05144)
   - In this paper the authors use [Kronecker-factored Approximate Curvature (K-FAC)](https://arxiv.org/abs/1503.05671) to approximate the inverse fisher matrix, this allows them to easily apply the *natural gradient* in a sample efficient way.
-- [Reinforcement Learning with Unsupervised Auxiliary Tasks](https://arxiv.org/abs/1611.05397) [Blog](https://deepmind.com/blog/reinforcement-learning-unsupervised-auxiliary-tasks/)
-  - The authors propose a new archiecture named UNREAL (UNsupervised REinforcement and Auxiliary Learning), which combines the learning of auxiliary tasks to help the agent in learning the main task. They present two auxiliary tasks: (1) Learning to predict how your actions will change the environment i.e. predict s<sub>t+1</sub> given (s<sub>t</sub>, a<sub>t</sub>) (2) Predict the immediate reward, similar to learning the value function with a discount factor equal to 0. These prediction heads are connected to the feature extraction layer hence they do not interfere (bias) with the policy or the value prediction, but they do help shape the feature extraction layers to facilitate faster learning.
-- [Grounded Language Learning in a Simulated 3D World](https://arxiv.org/abs/1706.06551)
-  - The agent is located in a 3D domain (visual input only), and is required to perform as task given in textual format. Their architecture consists of: (1) a CNN to parse the visual input (2) an LSTM to process the task, textual input (3) a Mixing module which combines the outputs of both modules (4) an output LSTM which computes a probability distribution over possible actions &pi;(a<sub>t</sub>, s<sub>t</sub>), and a state-value function approximator V(s<sub>t</sub>). They claim that the simple architecture was not enough in order to acheive learning and that at least several additions were required:
-    - Reward Prediction (RP) - In this auxillary task (*"Reinforcement Learning with Unsupervised Auxiliary Tasks"*), the agent is required to predict the immediate reward (similar to learning the value function with *&gamma; = 0*).
-    - Value Replay (VR) - Since the A3C learns in an on-line manner, the VR uses the replay memory (similarly to the DQN) to resample recent historical sequences.
-    - Language Prediction (LP) - Another output is received from the visual image processor, which is what the agent thinks will be the task. Intuitively this causes the agent to **understand** what are the important objects in the domain and to concentrate on them during the image parsing.
-    - Temporal Autoencoding (tAE) - The tAE's objective is given the visual data v<sub>t</sub> and the action a<sub>t</sub>, to predict the next visual environment v<sub>t+1</sub>.
-- [Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments](https://arxiv.org/abs/1706.02275)
-  - An upgrade to DPG (Deterministic Policy Gradient Algorithms, Silver et al. 2014), the algorithm proposed here uses an actor network and a critic network, with slowly updated matching target networks, to perform a policy gradient. An “experience replay” is used to enable training using mini-batches of state-action-reward-next state tuples. This breaks correlation between samples and enables convergence of the networks. The use of neural network function approximators allows the algorithm to be used in settings where the state and action spaces are continuous, without limiting discretization of the action space.
+- [DeepMimic](https://arxiv.org/abs/1804.02717) - [website](https://xbpeng.github.io/projects/DeepMimic/index.html), [blog](http://bair.berkeley.edu/blog/2018/04/10/virtual-stuntman/), [video](https://www.youtube.com/watch?v=vppFvq2quQ0)
+  - A recording of a human performing complex tasks is used as a regularizer for the agents behavior. They provide the agent with a task reward (how good it is at the given task) combined with a similarity reward (how similar is the behavior to that of the human). With the addition of several other nice tricks (e.g. early termination) they are able to achieve impressive empirical results.
 - [A Tour of Reinforcement Learning: The View from Continuous Control](https://arxiv.org/abs/1806.09460)
   - "This manuscript surveys reinforcement learning from the perspective of optimization and
 control with a focus on continuous control applications. It surveys the general formulation,
@@ -64,9 +58,31 @@ competing solution paradigms.
 This survey concludes with a discussion of some of the challenges in designing learning
 systems that safely and reliably interact with complex and uncertain environments and how
 tools from reinforcement learning and controls might be combined to approach these challenges."
-- [Many-Goals Reinforcement Learning](https://arxiv.org/abs/1806.09605)
-  - Many-goals is a task of learning multiple goals (reward signals) at once by exploiting the off-policy nature of the Q-learning algorithm. In this work they present several algorithms for many-goal learning and in addition, they show that many-goal learning can be used as an auxillary task.
 
+## Evolution Strategies
+- [Evolution Strategies as a Scalable Alternative to Reinforcement Learning](https://arxiv.org/abs/1703.03864) - [website](https://blog.openai.com/evolution-strategies/)
+  - Instead of running a single policy and optimizing it, we generate N random policies with a slight variance between them. We then evaluate them. Finally policies are combined as a weighted average where the weight is given with respect to the score in the evaluation. Combination is done at the weight level in the Neural Network.
+  Advantage is a highly parallel solution, where evaluation of all policies can be done in parallel. Also this doesn't require backpropagation, which is a compute intensive solution.
+- [Safe Mutations for Deep and Recurrent Neural Networks through Output Gradients](https://arxiv.org/abs/1712.06563)
+  - They show how gradients can be combined with neuroevolution to improve the ability to evolve recurrent and very deep neural networks, enabling the evolution of DNNs with over one hundred layers, a level far beyond what was previously shown possible through neuroevolution. They do so by computing the gradient of network outputs with respect to the weights (i.e. not the gradient of error as in conventional deep learning), enabling the calibration of random mutations to treat the most sensitive parameters more delicately than the least, thereby solving a major problem with random mutation in large networks.
+- [Improving Exploration in Evolution Strategies for Deep Reinforcement Learning via a Population of Novelty-Seeking Agents](https://arxiv.org/abs/1712.06560)
+- [Measuring the Intrinsic Dimension of Objective Landscapes](https://arxiv.org/abs/1804.08838) - [blog](https://eng.uber.com/intrinsic-dimension/)
+  - In the paper, they develop intrinsic dimension as a quantification of the complexity of a model in a manner decoupled from its raw parameter count, and provide a simple way of measuring this dimension using random projections.
+  
+## Model Based
+- [Learning to Act by Predicting the Future](https://arxiv.org/abs/1611.01779)
+  - They introduce two interesting elements: (A) A goal vector, essentially the priority of each task (pickup ammunition, kill enemies, stay alive), (B) they use a predicting element to predict the future values and select the action that best fits the goal.
+
+## Other interesting papers
+- [Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments](https://arxiv.org/abs/1706.02275)
+  - An upgrade to DPG (Deterministic Policy Gradient Algorithms, Silver et al. 2014), the algorithm proposed here uses an actor network and a critic network, with slowly updated matching target networks, to perform a policy gradient. An “experience replay” is used to enable training using mini-batches of state-action-reward-next state tuples. This breaks correlation between samples and enables convergence of the networks. The use of neural network function approximators allows the algorithm to be used in settings where the state and action spaces are continuous, without limiting discretization of the action space.
+- [Grounded Language Learning in a Simulated 3D World](https://arxiv.org/abs/1706.06551)
+  - The agent is located in a 3D domain (visual input only), and is required to perform as task given in textual format. Their architecture consists of: (1) a CNN to parse the visual input (2) an LSTM to process the task, textual input (3) a Mixing module which combines the outputs of both modules (4) an output LSTM which computes a probability distribution over possible actions &pi;(a<sub>t</sub>, s<sub>t</sub>), and a state-value function approximator V(s<sub>t</sub>). They claim that the simple architecture was not enough in order to acheive learning and that at least several additions were required:
+    - Reward Prediction (RP) - In this auxillary task (*"Reinforcement Learning with Unsupervised Auxiliary Tasks"*), the agent is required to predict the immediate reward (similar to learning the value function with *&gamma; = 0*).
+    - Value Replay (VR) - Since the A3C learns in an on-line manner, the VR uses the replay memory (similarly to the DQN) to resample recent historical sequences.
+    - Language Prediction (LP) - Another output is received from the visual image processor, which is what the agent thinks will be the task. Intuitively this causes the agent to **understand** what are the important objects in the domain and to concentrate on them during the image parsing.
+    - Temporal Autoencoding (tAE) - The tAE's objective is given the visual data v<sub>t</sub> and the action a<sub>t</sub>, to predict the next visual environment v<sub>t+1</sub>.
+  
 # GANs
 - [Wasserstein GAN](https://arxiv.org/abs/1701.07875)
   - The authors propose to train the discriminator in a way such that the function it learns is the estimation of the Earth Mover (EM) distance (also known as Wasserstein distance). The benefit in this is that the normal GAN is trained to estimate the Jensen-Shannon (JS) distance, which isn't always defined and further more when trained to optimality - the discrimiators output looks like a 0-1 function (i.e gradients almost don't exist).
