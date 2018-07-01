@@ -25,7 +25,7 @@
 
 # Reinforcement Learning
 ## General
-- [*(Draft)* Reinforcement Learning: An Introduction, Richard S. Sutton and Andrew G. Barto](http://incompleteideas.net/sutton/book/bookdraft2017nov5.pdf)
+- [*(Draft)* Reinforcement Learning: An Introduction, Richard S. Sutton and Andrew G. Barto](http://incompleteideas.net/book/the-book-2nd.html)
   - The latest *draft* of the RL intro book, which provides an overview over many of the topics in the field.
 - [Deep Reinforcement Learning that Matters](https://arxiv.org/abs/1709.06560)
   - The authors in this paper bring to light a large problem with Deep RL. I believe that **reading this paper is a requirement to anyone intending to work with Deep RL**, to properly understand the past / current issues with the research. The problems the authors bring up, are backed by extensive tests to prove their claims. The issues are regarding methods of reporting the results and model evaluation, which are inconsistent between papers and domains and in some cases are bad practice.
