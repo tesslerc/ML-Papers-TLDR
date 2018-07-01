@@ -43,16 +43,12 @@
   - By using a density network they predict how many times a state has been seen (the pseudo-count). The Q values are then updated by providing an intrinstic motivating reward which decays monotonically in the pseudo-count.
 
 ## Policy based methods
-- [Universal Option Models](https://papers.nips.cc/paper/5590-universal-option-models.pdf)
-- [Universal Value Function Approximators](http://proceedings.mlr.press/v37/schaul15.pdf)
 - [Trust Region Policy Optimization](https://arxiv.org/abs/1502.05477)
 - [Proximal Policy Optimization Algorithms](https://arxiv.org/abs/1707.06347)
 - [Continuous control with deep reinforcement learning (Deep Deterministic Policy Gradients)](https://arxiv.org/abs/1509.02971)
 - [Asynchronous Methods for Deep Reinforcement Learning (A3C)](https://arxiv.org/abs/1602.01783)
 - [Scalable trust-region method for deep reinforcement learning using Kronecker-factored approximation](https://arxiv.org/abs/1708.05144)
   - In this paper the authors use [Kronecker-factored Approximate Curvature (K-FAC)](https://arxiv.org/abs/1503.05671) to approximate the inverse fisher matrix, this allows them to easily apply the *natural gradient* in a sample efficient way.
-- [DeepMimic](https://arxiv.org/abs/1804.02717) - [website](https://xbpeng.github.io/projects/DeepMimic/index.html), [blog](http://bair.berkeley.edu/blog/2018/04/10/virtual-stuntman/), [video](https://www.youtube.com/watch?v=vppFvq2quQ0)
-  - A recording of a human performing complex tasks is used as a regularizer for the agents behavior. They provide the agent with a task reward (how good it is at the given task) combined with a similarity reward (how similar is the behavior to that of the human). With the addition of several other nice tricks (e.g. early termination) they are able to achieve impressive empirical results.
 - [A Tour of Reinforcement Learning: The View from Continuous Control](https://arxiv.org/abs/1806.09460)
   - "This manuscript surveys reinforcement learning from the perspective of optimization and
 control with a focus on continuous control applications. It surveys the general formulation,
@@ -78,6 +74,8 @@ tools from reinforcement learning and controls might be combined to approach the
   - They introduce two interesting elements: (A) A goal vector, essentially the priority of each task (pickup ammunition, kill enemies, stay alive), (B) they use a predicting element to predict the future values and select the action that best fits the goal.
 
 ## Other interesting papers
+- [Universal Option Models](https://papers.nips.cc/paper/5590-universal-option-models.pdf)
+- [Universal Value Function Approximators](http://proceedings.mlr.press/v37/schaul15.pdf)
 - [Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments](https://arxiv.org/abs/1706.02275)
   - An upgrade to DPG (Deterministic Policy Gradient Algorithms, Silver et al. 2014), the algorithm proposed here uses an actor network and a critic network, with slowly updated matching target networks, to perform a policy gradient. An “experience replay” is used to enable training using mini-batches of state-action-reward-next state tuples. This breaks correlation between samples and enables convergence of the networks. The use of neural network function approximators allows the algorithm to be used in settings where the state and action spaces are continuous, without limiting discretization of the action space.
 - [Grounded Language Learning in a Simulated 3D World](https://arxiv.org/abs/1706.06551)
@@ -86,7 +84,9 @@ tools from reinforcement learning and controls might be combined to approach the
     - Value Replay (VR) - Since the A3C learns in an on-line manner, the VR uses the replay memory (similarly to the DQN) to resample recent historical sequences.
     - Language Prediction (LP) - Another output is received from the visual image processor, which is what the agent thinks will be the task. Intuitively this causes the agent to **understand** what are the important objects in the domain and to concentrate on them during the image parsing.
     - Temporal Autoencoding (tAE) - The tAE's objective is given the visual data v<sub>t</sub> and the action a<sub>t</sub>, to predict the next visual environment v<sub>t+1</sub>.
-  
+- [DeepMimic](https://arxiv.org/abs/1804.02717) - [website](https://xbpeng.github.io/projects/DeepMimic/index.html), [blog](http://bair.berkeley.edu/blog/2018/04/10/virtual-stuntman/), [video](https://www.youtube.com/watch?v=vppFvq2quQ0)
+  - A recording of a human performing complex tasks is used as a regularizer for the agents behavior. They provide the agent with a task reward (how good it is at the given task) combined with a similarity reward (how similar is the behavior to that of the human). With the addition of several other nice tricks (e.g. early termination) they are able to achieve impressive empirical results.
+
 # GANs
 - [Wasserstein GAN](https://arxiv.org/abs/1701.07875)
   - The authors propose to train the discriminator in a way such that the function it learns is the estimation of the Earth Mover (EM) distance (also known as Wasserstein distance). The benefit in this is that the normal GAN is trained to estimate the Jensen-Shannon (JS) distance, which isn't always defined and further more when trained to optimality - the discrimiators output looks like a 0-1 function (i.e gradients almost don't exist).
