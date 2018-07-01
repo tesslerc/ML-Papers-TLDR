@@ -1,5 +1,8 @@
 # Machine Learning Papers TL;DR
 
+Papers are removed on a regular basis, based on how novel I feel they are.
+Feel free to send push requests with your own paper summaries. The more people that contribute, the better this TL;DR page can become.
+
 # Contents
 [General](#general)
 
@@ -29,6 +32,8 @@
   - The latest *draft* of the RL intro book, which provides an overview over many of the topics in the field.
 - [Deep Reinforcement Learning that Matters](https://arxiv.org/abs/1709.06560)
   - The authors in this paper bring to light a large problem with Deep RL. I believe that **reading this paper is a requirement to anyone intending to work with Deep RL**, to properly understand the past / current issues with the research. The problems the authors bring up, are backed by extensive tests to prove their claims. The issues are regarding methods of reporting the results and model evaluation, which are inconsistent between papers and domains and in some cases are bad practice.
+- [An Outsider's Tour of Reinforcement Learning](http://www.argmin.net/2018/06/25/outsider-rl/)
+  - An excellent series of blog posts by Ben Recht in which he tackles many misconceptions in recent RL progress.
 - [Reinforcement Learning with Unsupervised Auxiliary Tasks](https://arxiv.org/abs/1611.05397) [Blog](https://deepmind.com/blog/reinforcement-learning-unsupervised-auxiliary-tasks/)
   - The authors propose a new archiecture named UNREAL (UNsupervised REinforcement and Auxiliary Learning), which combines the learning of auxiliary tasks to help the agent in learning the main task. They present two auxiliary tasks: (1) Learning to predict how your actions will change the environment i.e. predict s<sub>t+1</sub> given (s<sub>t</sub>, a<sub>t</sub>) (2) Predict the immediate reward, similar to learning the value function with a discount factor equal to 0. These prediction heads are connected to the feature extraction layer hence they do not interfere (bias) with the policy or the value prediction, but they do help shape the feature extraction layers to facilitate faster learning.
 - [Hindsight Experience Replay](https://arxiv.org/abs/1707.01495)
