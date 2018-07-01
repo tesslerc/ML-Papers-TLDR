@@ -98,10 +98,4 @@ tools from reinforcement learning and controls might be combined to approach the
 # Natural Language Processing
 
 # Non-summarized
-- [Explaining How a Deep Neural Network Trained with End-to-End Learning Steers a Car](https://arxiv.org/abs/1704.07911)
-  - Last I checked, Nvidia perform deep imitation learning.
-- [Visual Attribute Transfer through Deep Image Analogy](https://arxiv.org/abs/1705.01088)
 - [Generative Adversarial Trainer: Defense to Adversarial Perturbations with GAN](https://arxiv.org/abs/1705.03387) + [Adversarial Transformation Networks: Learning to Generate Adversarial Examples](https://arxiv.org/pdf/1703.09387.pdf)
-- [Model-based Adversarial Imitation Learning](https://arxiv.org/abs/1612.02179)
-- [Real-Time Adaptive Image Compression](http://www.wave.one/icml2017)
-- [Super-Convergence: Very Fast Training of Residual Networks Using Large Learning Rates](https://arxiv.org/abs/1708.07120)
