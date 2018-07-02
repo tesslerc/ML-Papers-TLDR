@@ -34,7 +34,7 @@ Feel free to send push requests with your own paper summaries. The more people t
 - [Tracking Emerges by Colorizing Videos](https://arxiv.org/abs/1806.09594) - [blog](https://ai.googleblog.com/2018/06/self-supervised-tracking-via-video.html)
   -  They train a network to colorize a grayscale video based on a colored initial frame. They find that this method allows for object tracking by coloring the initial object.
 - [AutoAugment: Learning Augmentation Policies from Data](https://arxiv.org/abs/1805.09501) - [blog](https://ai.googleblog.com/2018/06/improving-deep-learning-performance.html)
-  - Using reinforcement learning techniques, the system learns how to optimally augment the data such that the network will generalize best. They achieve state of the art (83.54% on top1 accuracy on ImageNet) which is close to the results from Facebook in which they used the whole of Instagram as pre-training data.
+  - Using reinforcement learning techniques, the system learns how to optimally augment the data such that the network will generalize best. They achieve state of the art (83.54% on top1 accuracy on ImageNet) which is close to the results from [Facebook](https://code.fb.com/applied-machine-learning/advancing-state-of-the-art-image-recognition-with-deep-learning-on-hashtags/) in which they used the whole of Instagram as pre-training data.
 
 # Reinforcement Learning
 ## General
