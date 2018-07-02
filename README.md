@@ -21,7 +21,7 @@ This section contains links to informative blogs regarding basic concepts in mac
 - [VAE - Variational Auto-Encoder](https://towardsdatascience.com/intuitively-understanding-variational-autoencoders-1bfe67eb5daf)
 - [GAN - Generative Adversarial Network](https://medium.freecodecamp.org/an-intuitive-introduction-to-generative-adversarial-networks-gans-7a2264a81394)
 - [LSTM - Long-Short term memory networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/) - a form of Recurrent neural networks.
-
+- [Attention mechanism](https://distill.pub/2016/augmented-rnns/)
 
 # General
 ## Theory
