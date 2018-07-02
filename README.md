@@ -44,6 +44,8 @@ Feel free to send push requests with your own paper summaries. The more people t
   - The authors in this paper bring to light a large problem with Deep RL. I believe that **reading this paper is a requirement to anyone intending to work with Deep RL**, to properly understand the past / current issues with the research. The problems the authors bring up, are backed by extensive tests to prove their claims. The issues are regarding methods of reporting the results and model evaluation, which are inconsistent between papers and domains and in some cases are bad practice.
 - [An Outsider's Tour of Reinforcement Learning](http://www.argmin.net/2018/06/25/outsider-rl/)
   - An excellent series of blog posts by Ben Recht in which he tackles many misconceptions in recent RL progress.
+- [Measuring the Intrinsic Dimension of Objective Landscapes](https://arxiv.org/abs/1804.08838) - [blog](https://eng.uber.com/intrinsic-dimension/)
+  - In the paper, they develop intrinsic dimension as a quantification of the complexity of a model in a manner decoupled from its raw parameter count, and provide a simple way of measuring this dimension using random projections.
 - [Hindsight Experience Replay](https://arxiv.org/abs/1707.01495)
   - On each episode the agent receives a task (e.g. a location to reach). As the reward is sparse and there is no prior knowledge, learning such tasks is near impossible. This is overcome by using a hindsight experience replay which modifies the goal given for each trajectory such that the trajectory reaches the goal. (this can be seen as a human-like approach in which we learn from trial and error by observing the consequences of our actions).
 
@@ -82,8 +84,8 @@ tools from reinforcement learning and controls might be combined to approach the
 - [Safe Mutations for Deep and Recurrent Neural Networks through Output Gradients](https://arxiv.org/abs/1712.06563)
   - They show how gradients can be combined with neuroevolution to improve the ability to evolve recurrent and very deep neural networks, enabling the evolution of DNNs with over one hundred layers, a level far beyond what was previously shown possible through neuroevolution. They do so by computing the gradient of network outputs with respect to the weights (i.e. not the gradient of error as in conventional deep learning), enabling the calibration of random mutations to treat the most sensitive parameters more delicately than the least, thereby solving a major problem with random mutation in large networks.
 - [Improving Exploration in Evolution Strategies for Deep Reinforcement Learning via a Population of Novelty-Seeking Agents](https://arxiv.org/abs/1712.06560)
-- [Measuring the Intrinsic Dimension of Objective Landscapes](https://arxiv.org/abs/1804.08838) - [blog](https://eng.uber.com/intrinsic-dimension/)
-  - In the paper, they develop intrinsic dimension as a quantification of the complexity of a model in a manner decoupled from its raw parameter count, and provide a simple way of measuring this dimension using random projections.
+- [Guided evolutionary strategies: escaping the curse of dimensionality in random search](https://arxiv.org/abs/1806.10230)
+  - While in many cases the real gradient is hard to estimate (e.g. simulation based estimation), a surrogate gradient is easy to define, such that it points in the general direction of the real gradient. They use this as a guiding signal for the evolution algorithm, such the covariance matrix of ES is projected onto the gradient directions.
   
 ## Model Based
 - [Learning to Act by Predicting the Future](https://arxiv.org/abs/1611.01779)
