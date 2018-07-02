@@ -4,6 +4,8 @@ Papers are removed on a regular basis, based on how novel I feel they are.
 Feel free to send push requests with your own paper summaries. The more people that contribute, the better this TL;DR page can become.
 
 # Contents
+[Concepts](#concepts)
+
 [General](#general)
 
 [Reinforcement Learning](#reinforcement-learning)
@@ -11,6 +13,15 @@ Feel free to send push requests with your own paper summaries. The more people t
 [GANs](#gans)
 
 [Natural Language Processing](#natural-language-processing)
+
+# Concepts
+This section contains links to informative blogs regarding basic concepts in machine learning literature.
+
+- [Reinforcement Learning](https://medium.freecodecamp.org/an-introduction-to-reinforcement-learning-4339519de419)
+- [VAE - Variational Auto-Encoder](https://towardsdatascience.com/intuitively-understanding-variational-autoencoders-1bfe67eb5daf)
+- [GAN - Generative Adversarial Network](https://medium.freecodecamp.org/an-intuitive-introduction-to-generative-adversarial-networks-gans-7a2264a81394)
+- [LSTM - Long-Short term memory networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)
+
 
 # General
 ## Theory
@@ -94,6 +105,16 @@ tools from reinforcement learning and controls might be combined to approach the
   - They train a model to predict the next latent state. Using this they can then learn a policy based on the models hallucinations.
 - [Neural scene representation and rendering](https://deepmind.com/documents/211/Neural_Scene_Representation_and_Rendering_preprint.pdf) - [blog](https://deepmind.com/blog/neural-scene-representation-and-rendering/)
   - Given a few frame of the environment (from different viewpoints), they are able to recreate a full model allowing an agent to traverse the imaginary world.
+
+## Bandits
+- [A Survey on Contextual Multi-armed Bandits](https://arxiv.org/abs/1508.03326)
+  - In contextual MAB, each arm has a context provided to it. We assume there is some linear projection, i.e. a mapping from the context to the expected reward.
+- [X-Armed Bandits](http://www.jmlr.org//papers/v12/bubeck11a.html)
+  - The X-armed bandit represents a problem in which we have infinitely many arms represented by some continuous subspace (e.g. the range \[0,1\]). The reward is assumed to be "locally Lipschitz". The goal is to find the optimal arm, or to be epsilon close to it.
+- [Combinatorial Multi-Armed Bandit: General Framework and Applications](http://proceedings.mlr.press/v28/chen13a.html)
+  - In CMAB they define a "super-arm" which is a combination of N "simple" arms. Upon playing a super-arm, the reward for each simple-arm is observed. The goal is to learn to find the optimal super-arm. *This is a form of batched bandits*
+- [Batched bandit problems](https://arxiv.org/abs/1505.00369)
+  - The limitation of this framework is that the arm selection is performed in batches. This means that a decision is made once every T steps for a total of T arms. They show that due to the uncertainty bound of the UCB algorithm, we can effectively select batches the size of log(t) without any impact on the performance (this leads to the fact that we can increase the batch size over time as we become more confident in the empirical estimates).
 
 ## Other interesting papers
 - [Universal Option Models](https://papers.nips.cc/paper/5590-universal-option-models.pdf)
