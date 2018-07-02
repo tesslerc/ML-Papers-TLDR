@@ -13,6 +13,12 @@ Feel free to send push requests with your own paper summaries. The more people t
 [Natural Language Processing](#natural-language-processing)
 
 # General
+## Theory
+- [Dynamical Isometry and a Mean Field Theory of CNNs: How to Train 10,000-Layer Vanilla Convolutional Neural Networks](https://arxiv.org/abs/1806.05393)
+  - They develop a new initialization scheme which allows the gradients to properly propagate through extremely deep networks.
+- [ResNet with one-neuron hidden layers is a Universal Approximator](https://arxiv.org/abs/1806.10909)
+
+## Application
 - [DSD: Dense-Sparse-Dense Training for Deep Neural Networks](https://arxiv.org/abs/1607.04381)
   - The authors propose a new method for training Deep Neural Networks.
     > In the first D (Dense) step, we train a dense network to learn connection weights and importance. In the S (Sparse) step, we regularize the network by pruning the unimportant connections with small weights and retraining the network given the sparsity constraint. In the final D (re-Dense) step, we increase the model capacity by removing the sparsity constraint, re-initialize the pruned parameters from zero and retrain the whole dense network.
@@ -24,7 +30,11 @@ Feel free to send push requests with your own paper summaries. The more people t
   - The authors propose to overcome this by using a generative approach – for a given test image, find the latent variable that produces it in generators trained for each class. Then, choose the one with the highest confidence (i.e lowest error compared to the original image).
   - Intuitive error measures are for instance the MSE, we can define a threshold underwhich the generator is considered unconfident. If all classes are 'unconfident' we would prefer not to classify over being wrong with a high proability.
   - This is a general approach – and can be used with VAEs or GANs, or even with a k-Means generative model.
-  - The paper shows competitive results for in-distribution test images, and very good results on out-of-distribution images (meaning, the model knows to reject the examples rather than misclassify them).  
+  - The paper shows competitive results for in-distribution test images, and very good results on out-of-distribution images (meaning, the model knows to reject the examples rather than misclassify them).
+- [Tracking Emerges by Colorizing Videos](https://arxiv.org/abs/1806.09594) - [blog](https://ai.googleblog.com/2018/06/self-supervised-tracking-via-video.html)
+  -  They train a network to colorize a grayscale video based on a colored initial frame. They find that this method allows for object tracking by coloring the initial object.
+- [AutoAugment: Learning Augmentation Policies from Data](https://arxiv.org/abs/1805.09501) - [blog](https://ai.googleblog.com/2018/06/improving-deep-learning-performance.html)
+  - Using reinforcement learning techniques, the system learns how to optimally augment the data such that the network will generalize best. They achieve state of the art (83.54% on top1 accuracy on ImageNet) which is close to the results from Facebook in which they used the whole of Instagram as pre-training data.
 
 # Reinforcement Learning
 ## General
@@ -77,6 +87,10 @@ tools from reinforcement learning and controls might be combined to approach the
 ## Model Based
 - [Learning to Act by Predicting the Future](https://arxiv.org/abs/1611.01779)
   - They introduce two interesting elements: (A) A goal vector, essentially the priority of each task (pickup ammunition, kill enemies, stay alive), (B) they use a predicting element to predict the future values and select the action that best fits the goal.
+- [World Models](https://arxiv.org/abs/1803.10122) - [blog](https://worldmodels.github.io/)
+  - They train a model to predict the next latent state. Using this they can then learn a policy based on the models hallucinations.
+- [Neural scene representation and rendering](https://deepmind.com/documents/211/Neural_Scene_Representation_and_Rendering_preprint.pdf) - [blog](https://deepmind.com/blog/neural-scene-representation-and-rendering/)
+  - Given a few frame of the environment (from different viewpoints), they are able to recreate a full model allowing an agent to traverse the imaginary world.
 
 ## Other interesting papers
 - [Universal Option Models](https://papers.nips.cc/paper/5590-universal-option-models.pdf)
