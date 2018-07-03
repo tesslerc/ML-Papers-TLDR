@@ -107,8 +107,12 @@ tools from reinforcement learning and controls might be combined to approach the
   - Given a few frame of the environment (from different viewpoints), they are able to recreate a full model allowing an agent to traverse the imaginary world.
 
 ## Bandits
+- [Finite-time Analysis of the Multiarmed Bandit
+Problem](https://homes.di.unimi.it/~cesabian/Pubblicazioni/ml-02.pdf)
+  - Upper confidence bound algorithm for the multi armed bandit problem.
 - [A Survey on Contextual Multi-armed Bandits](https://arxiv.org/abs/1508.03326)
   - In contextual MAB, each arm has a context provided to it. We assume there is some linear projection, i.e. a mapping from the context to the expected reward.
+  - [Improved Algorithms for Linear Stochastic Bandits](http://david.palenica.com/papers/linear-bandit/linear-bandits-NIPS2011-camera-ready.pdf) - Confidence bounds for linear contextual bandits
 - [X-Armed Bandits](http://www.jmlr.org//papers/v12/bubeck11a.html)
   - The X-armed bandit represents a problem in which we have infinitely many arms represented by some continuous subspace (e.g. the range \[0,1\]). The reward is assumed to be "locally Lipschitz". The goal is to find the optimal arm, or to be epsilon close to it.
 - [Combinatorial Multi-Armed Bandit: General Framework and Applications](http://proceedings.mlr.press/v28/chen13a.html)
