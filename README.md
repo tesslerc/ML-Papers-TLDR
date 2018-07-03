@@ -46,6 +46,8 @@ This section contains links to informative blogs regarding basic concepts in mac
   -  They train a network to colorize a grayscale video based on a colored initial frame. They find that this method allows for object tracking by coloring the initial object.
 - [AutoAugment: Learning Augmentation Policies from Data](https://arxiv.org/abs/1805.09501) - [blog](https://ai.googleblog.com/2018/06/improving-deep-learning-performance.html)
   - Using reinforcement learning techniques, the system learns how to optimally augment the data such that the network will generalize best. They achieve state of the art (83.54% on top1 accuracy on ImageNet) which is close to the results from [Facebook](https://code.fb.com/applied-machine-learning/advancing-state-of-the-art-image-recognition-with-deep-learning-on-hashtags/) in which they used the whole of Instagram as pre-training data.
+- [Dynamic Routing Between Capsules](https://arxiv.org/abs/1710.09829) - [blog](https://medium.com/ai%C2%B3-theory-practice-business/understanding-hintons-capsule-networks-part-i-intuition-b4b559d1159b)
+  - Capsules introduce a new building block that can be used in deep learning to better model hierarchical relationships inside of internal knowledge representation of a neural network.
 
 # Reinforcement Learning
 ## General
