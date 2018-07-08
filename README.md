@@ -74,10 +74,11 @@ This section contains links to informative blogs regarding basic concepts in mac
   - By using a density network they predict how many times a state has been seen (the pseudo-count). The Q values are then updated by providing an intrinstic motivating reward which decays monotonically in the pseudo-count.
 
 ## Policy based methods
+- [Asynchronous Methods for Deep Reinforcement Learning (A3C)](https://arxiv.org/abs/1602.01783)
+  - A3C is an asyncronous version of Advantage-Actor-Critic (A2C). A2C is a policy gradient algorithm in which the value function is subtracted from the reward (the agent attempts to maximize the advantage), in these algorithms the gradient is estimated by running multiple agents at once. In A3C the asyncronous part is achieved by having each agent send asyncronous gradient updates to a master node and periodically update the model from it.
 - [Trust Region Policy Optimization](https://arxiv.org/abs/1502.05477), [Proximal Policy Optimization Algorithms](https://arxiv.org/abs/1707.06347)
   - TRPO and PPO are Trust Region search algorithms for reinforcement learning policy models. The idea is that as the model is non-linear, the further the weights move the lower the confidence we have that the new policy will be better than the previous one. This problem is tackled by constraining the distance the weights can move to a sub-space around the current weights. This can be seen as an adaptive learning rate per-step per weight which ensures a "safer" convergence to the fixed point.
 - [Continuous control with deep reinforcement learning (Deep Deterministic Policy Gradients)](https://arxiv.org/abs/1509.02971)
-- [Asynchronous Methods for Deep Reinforcement Learning (A3C)](https://arxiv.org/abs/1602.01783)
 - [Scalable trust-region method for deep reinforcement learning using Kronecker-factored approximation](https://arxiv.org/abs/1708.05144)
   - In this paper the authors use [Kronecker-factored Approximate Curvature (K-FAC)](https://arxiv.org/abs/1503.05671) to approximate the inverse fisher matrix, this allows them to easily apply the *natural gradient* in a sample efficient way.
 - [A Tour of Reinforcement Learning: The View from Continuous Control](https://arxiv.org/abs/1806.09460)
